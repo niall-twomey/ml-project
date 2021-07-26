@@ -1,3 +1,7 @@
 {
-    "project_name": "project_name"
+    "project_name": "project_name", 
+    "development": true, 
+    "make_pipenv": true, 
+    "initialise_git": true
 }
+
