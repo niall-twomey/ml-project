@@ -1,0 +1,16 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+pytest = ">=4.3.1"
+pylint = ">=1.9.4"
+pre-commit = ">=2.10"
+flake8 = ">=3.8"
+
+[packages]
+
+[requires]
+python_version = "3.8"
+
