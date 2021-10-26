@@ -8,5 +8,5 @@ pip install pre-commit
 pre-commit install 
 
 # Install the pipenv environment
-pipenv install --dev 
+# pipenv install --dev 
 
