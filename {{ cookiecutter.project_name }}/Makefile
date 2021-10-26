@@ -1,4 +1,4 @@
-.PHONY: env_create env_shell run 
+.PHONY: create_env activate_env run 
 
 include .env
 
@@ -10,22 +10,25 @@ PYTHON = python
 MAKE = /usr/bin/make
 
 {% if cookiecutter.environment == "local" %}
-env_create: 
+create_env: 
 	
-env_shell: 
+activate_env: 
 	
 {% elif cookiecutter.environment == "conda" %}
-env_create: 
+
+nt_conda_session 
+
+create_env: 
 	conda create --name {{ cookiecutter.project_name }}
 	
-env_shell: 
+activate_env: 
 	conda activate {{ cookiecutter.project_name }}
 	
 {% elif cookiecutter.environment == "pipenv" %}
-env_create: 
+create_env: 
 	pipenv install
 	
-env_shell: 
+activate_env: 
 	pipenv shell
 	
 {% endif %}
