@@ -16,8 +16,6 @@ activate_env:
 	
 {% elif cookiecutter.environment == "conda" %}
 
-nt_conda_session 
-
 create_env: 
 	conda create --name {{ cookiecutter.project_name }}
 	
