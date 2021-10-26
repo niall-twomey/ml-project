@@ -9,21 +9,19 @@ PYTHON = python
 
 MAKE = /usr/bin/make
 
-{%- if cookiecutter.environment == "local" -%}
+{% if cookiecutter.environment == "local" %}
 env_create: 
-	
 	
 env_shell: 
 	
-
-{%- elif cookiecutter.environment == "conda" -%}
+{% elif cookiecutter.environment == "conda" %}
 env_create: 
 	conda create --name {{ cookiecutter.project_name }}
 	
 env_shell: 
 	conda activate {{ cookiecutter.project_name }}
 	
-{%- elif cookiecutter.environment == "pipenv" -%}
+{% elif cookiecutter.environment == "pipenv" %}
 env_create: 
 	pipenv install
 	
