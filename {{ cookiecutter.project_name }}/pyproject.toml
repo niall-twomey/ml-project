@@ -1,23 +1,24 @@
-[tool.black]
-line-length = 120
-target-version = ['py39',]
-include = '\.pyi?$'
-exclude = '''
-/(
-    \.eggs
-  | \.git
-  | \.hg
-  | \.mypy_cache
-  | \.tox
-  | \.venv
-  | _build
-  | buck-out
-  | build
-  | dist
-  # The following are specific to Black, you probably don't want those.
-  | blib2to3
-  | tests/data
-  | profiling
-)/
-'''
-
+repos:
+  - repo: https://github.com/psf/black
+    rev: 22.3.0
+    hooks:
+      - id: black
+  - repo: https://github.com/asottile/reorder_python_imports
+    rev: v2.4.0
+    hooks:
+      - id: reorder-python-imports
+  - repo: https://github.com/pycqa/flake8
+    rev: 3.7.9
+    hooks:
+      - id: flake8
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.4.0
+    hooks:
+      - id: check-added-large-files
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-json
+      - id: check-toml
+      - id: check-merge-conflict
+#      - id: no-commit-to-branch
+#        args: [ '--branch', 'main' ]
