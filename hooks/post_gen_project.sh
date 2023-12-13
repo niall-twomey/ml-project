@@ -26,7 +26,7 @@ if [ "$ENVIRONMENT_TYPE" = "conda" ]; then
   conda activate "$PROJECT_NAME"
 
   echo "Installing pre-commit via conda..." 
-  conda install pre-commit -y
+  conda install -c conda-forge pre-commit
 else
   echo "Installing pre-commit via pip..." 
   pip install pre-commit 
