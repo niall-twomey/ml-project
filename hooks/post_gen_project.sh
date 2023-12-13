@@ -11,11 +11,6 @@ INSTALL_RECOMMENDED="{{ cookiecutter.install_recommended }}"
 # Initialise git  
 git init 
 
-echo `which conda`
-echo `conda`
-
-exit()
-
 # Create environment if needed
 echo "Setting up environment..."
 if [ "$ENVIRONMENT_TYPE" = "conda" ]; then
