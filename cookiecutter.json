@@ -1,6 +1,6 @@
 {
     "project_name": "project_name", 
-    "environment": ["local", "conda"], 
-    "python_version": ["3.8", "3.9", "3.10", "3.11", "3.12", "3.13"], 
+    "environment": ["conda", "local"], 
+    "python_version": ["3.12", "3.8", "3.9", "3.10", "3.11", "3.13"], 
     "install_recommended": "yes"
 }
