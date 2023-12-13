@@ -10,15 +10,15 @@ git init
 
 # Create environment if needed
 echo "Setting up environment..."
-if [ "${ENVIRONMENT_TYPE}" = "conda" ]; then
-  if conda info --envs | grep -q "${PROJECT_NAME}"; then 
+if [ "$ENVIRONMENT_TYPE" = "conda" ]; then
+  if conda info --envs | grep -q "$PROJECT_NAME"; then 
     echo "Conda environment already exists. Skipping."
   else
     echo "Creating new conda environment" 
-    conda create --name "${}" python="${PYTHON_VERSION}"
+    conda create --name "$PROJECT_NAME" python="$PYTHON_VERSION"
   fi 
   
-  conda activate "${PROJECT_NAME}"
+  conda activate "$PROJECT_NAME"
   
   conda install pre-commit 
 else
