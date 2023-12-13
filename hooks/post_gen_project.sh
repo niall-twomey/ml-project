@@ -1,4 +1,4 @@
-#!/bin/bash
+source ~/.zshrc
 
 # Define variables
 PROJECT_NAME="{{ cookiecutter.project_name }}"
