@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Activate environment
-PROJECT_NAME = "{{ cookiecutter.project_name }}"
-ENVIRONMENT_TYPE = "{{ cookiecutter.environment }}"
-PYTHON_VERSION = "{{ cookiecutter.python_version }}"
+PROJECT_NAME="{{ cookiecutter.project_name }}"
+ENVIRONMENT_TYPE="{{ cookiecutter.environment }}"
+PYTHON_VERSION="{{ cookiecutter.python_version }}"
 
 # Set up git  
 git init 
