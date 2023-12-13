@@ -12,7 +12,7 @@ git init
 # Create environment if needed
 echo "Setting up environment..."
 if [ "$ENVIRONMENT_TYPE" = "conda" ]; then
-  # Ensure that the conda environment is currently active
+  echo "Activating base conda just in case..."
   conda activate 
 
   if conda info --envs | grep -q "$PROJECT_NAME"; then 
@@ -26,7 +26,7 @@ if [ "$ENVIRONMENT_TYPE" = "conda" ]; then
   conda activate "$PROJECT_NAME"
 
   echo "Installing pre-commit via conda..." 
-  conda install -c conda-forge pre-commit
+  conda install -c conda-forge pre-commit -y
 else
   echo "Installing pre-commit via pip..." 
   pip install pre-commit 
