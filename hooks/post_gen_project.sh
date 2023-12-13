@@ -13,7 +13,7 @@ git init
 echo "Setting up environment..."
 if [ "$ENVIRONMENT_TYPE" = "conda" ]; then
   echo "Activating base conda just in case..."
-  conda activate 
+  #conda activate 
 
   if conda info --envs | grep -q "$PROJECT_NAME"; then 
     echo "Conda environment already exists. Skipping."
