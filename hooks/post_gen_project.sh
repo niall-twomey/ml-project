@@ -43,9 +43,9 @@ if [ "$INSTALL_RECOMMENDED" = "yes" ]; then
   echo "Installing dependencies..."
   
   if conda info --envs | grep -q "$PROJECT_NAME"; then 
-    conda install numpy scipy pandas matplotlib seaborn scikit-learn pyyaml tqdm -y
+    conda install numpy scipy pandas matplotlib seaborn scikit-learn pyyaml tqdm jupyter -y
   else
-    pip install numpy scipy pandas matplotlib seaborn scikit-learn pyyaml tqdm
+    pip install   numpy scipy pandas matplotlib seaborn scikit-learn pyyaml tqdm jupyter
   fi 
 fi 
 
